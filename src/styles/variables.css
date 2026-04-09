@@ -1,0 +1,17 @@
+:root {
+  --font-primary: 'Inter', sans-serif;
+  
+  --color-text-main: #111111;
+  --color-text-muted: #666666;
+  --color-bg: #f5f5f5;
+  
+  --color-light-green: #cfe3d6;
+  --color-light-pink: #f4c2d7;
+  --color-purple: #8b5cf6;
+  --color-yellow: #fcd34d;
+  --color-orange: #f9b16e;
+  --color-red: #f87171;
+  
+  --container-max-width: 1200px;
+  --padding-x: 24px;
+}

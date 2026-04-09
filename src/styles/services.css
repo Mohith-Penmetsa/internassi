@@ -1,0 +1,116 @@
+.services {
+  padding: 120px 80px;
+}
+
+.services-header {
+  margin-bottom: 4rem;
+}
+
+.services-title {
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.services-title .underline-shape {
+  bottom: 5px;
+  background-color: var(--color-orange);
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr auto;
+  align-items: center;
+  padding: 50px 0;
+  border-bottom: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.service-item:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.service-item:hover {
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.service-item:hover .service-arrow {
+  transform: translateX(10px);
+}
+
+.service-item:hover .service-name {
+  transform: translateX(10px);
+  transition: 0.3s ease;
+}
+
+.service-desc {
+  flex: 1;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.service-name {
+  flex: 2;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-align: center;
+  position: relative;
+}
+
+.service-arrow {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--color-text-main);
+  transition: transform 0.3s ease;
+}
+
+/* For the text image mask effect on 'confidence' */
+.relative {
+  position: relative;
+}
+
+.image-mask-text {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: color-burn; /* Gives the text a cutout feel on top of the image */
+}
+
+.text-image-mask {
+  position: absolute;
+  top: -15px;
+  left: 65%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=200&h=200&fit=crop');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .services-title { font-size: 3.5rem; }
+  .service-name { font-size: 2rem; text-align: left; padding-left: 2rem; }
+  .text-image-mask { left: 80%; }
+}
+
+@media (max-width: 768px) {
+  .service-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .service-name { padding-left: 0; font-size: 1.75rem; }
+  .service-arrow { align-self: flex-end; }
+  .text-image-mask { top: auto; bottom: 0; right: 0; left: auto; }
+}
